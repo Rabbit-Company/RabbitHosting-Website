@@ -1,0 +1,22 @@
+{
+  "name": "rabbithosting-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./tailwind.css -o ./website/css/tailwind.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rabbit-Company/RabbitHosting-Website.git"
+  },
+  "author": "Rabbit Company LLC",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Rabbit-Company/RabbitHosting-Website/issues"
+  },
+  "homepage": "https://github.com/Rabbit-Company/RabbitHosting-Website#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.22"
+  }
+}
