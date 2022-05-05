@@ -5,4 +5,4 @@
   X-XSS-Protection: 1; mode=block
   Content-Security-Policy: script-src 'report-sample' 'self' https://analytics.rabbit-company.com https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js; object-src 'none'; base-uri 'self'; connect-src 'self' https://analytics.rabbit-company.com; font-src 'self'; img-src 'self'; manifest-src 'self'; media-src 'self'; worker-src 'none'; frame-ancestors 'none';
   Permissions-Policy: interest-cohort=()
-  Onion-Location: y4aj33eo2tx3mqmj3e4ye7sxedhlynjqyniiz445isubyl5h76davaad.onion
+  Onion-Location: http://y4aj33eo2tx3mqmj3e4ye7sxedhlynjqyniiz445isubyl5h76davaad.onion
