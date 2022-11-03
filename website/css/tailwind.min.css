@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.1.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.2.1 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -355,13 +355,6 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   /* 2 */
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
@@ -415,6 +408,12 @@ img,
 video {
   max-width: 100%;
   height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
 }
 
 *, ::before, ::after {
