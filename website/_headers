@@ -2,6 +2,6 @@
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
-  Content-Security-Policy: script-src 'report-sample' 'self' https://analytics.rabbit-company.com https://cdn.sell.app https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js; object-src 'none'; base-uri 'self'; connect-src 'self' https://analytics.rabbit-company.com; font-src 'self'; img-src 'self'; manifest-src 'self'; media-src 'self'; worker-src 'none'; frame-ancestors 'none';
+  Content-Security-Policy: script-src 'report-sample' 'self' https://analytics.rabbit-company.com https://cdn.sell.app https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js; object-src 'none'; base-uri 'self'; connect-src 'self' https://analytics.rabbit-company.com https://sell.app; font-src 'self'; img-src 'self'; manifest-src 'self'; media-src 'self'; worker-src 'none'; frame-ancestors 'none';
   Permissions-Policy: interest-cohort=()
   Onion-Location: http://y4aj33eo2tx3mqmj3e4ye7sxedhlynjqyniiz445isubyl5h76davaad.onion
