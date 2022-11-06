@@ -4,7 +4,7 @@
   "description": "Website for Rabbit Hosting",
   "main": "index.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./tailwind.css -o ./website/css/tailwind.min.css"
+    "build": "npx tailwindcss -i ./tailwind.css -o ./website/css/tailwind.min.css --minify"
   },
   "repository": {
     "type": "git",
