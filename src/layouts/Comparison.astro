@@ -1,0 +1,59 @@
+---
+
+var { providers, date } = Astro.props;
+
+let categories = Object.keys(providers[Object.keys(providers)[0]]);
+
+---
+<div class="relative bg-gray-900">
+	<div class="max-w-7xl mx-auto pt-24 pb-24 px-4 sm:px-6 lg:px-8">
+		<div class="sm:flex sm:flex-col sm:align-center">
+			<h1 class="text-5xl font-extrabold text-white sm:text-center">Comparison</h1>
+		</div>
+		<div class="flex flex-col mt-24">
+			<div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+				<div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+					<div class="shadow overflow-hidden border-b border-gray-700 sm:rounded-lg">
+						<table class="min-w-full divide-y divide-gray-600">
+							<thead class="bg-gray-800 text-center">
+								<tr>
+									<th scope="col" class="px-6 py-3 text-center text-sm font-medium text-gray-300 uppercase tracking-wider"></th>
+									{Object.keys(providers).map((provider) => (
+										<th scope="col" class="px-6 py-3 text-center text-sm font-medium text-gray-300 uppercase tracking-wider"> {provider} </th>
+									))}
+								</tr>
+							</thead>
+							<tbody class="bg-gray-700 divide-y divide-gray-600 text-center">
+								{categories.map((category) => (
+									<tr>
+										<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300"> {category} </td>
+										{Object.keys(providers).map((provider) => (
+											providers[provider][category] === 'yes'
+											?
+											<td align="center" class="px-6 py-4 align-middle text-sm text-gray-400"><svg class="h-6" fill="#16a34a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm108.25 138.29l-134.4 160a16 16 0 01-12 5.71h-.27a16 16 0 01-11.89-5.3l-57.6-64a16 16 0 1123.78-21.4l45.29 50.32 122.59-145.91a16 16 0 0124.5 20.58z" /></svg></td>
+											:
+											providers[provider][category] === 'no'
+											?
+											<td align="center" class="px-6 py-4 align-middle text-sm text-gray-400"><svg class="h-6" fill="#b91c1c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm75.31 260.69a16 16 0 11-22.62 22.62L256 278.63l-52.69 52.68a16 16 0 01-22.62-22.62L233.37 256l-52.68-52.69a16 16 0 0122.62-22.62L256 233.37l52.69-52.68a16 16 0 0122.62 22.62L278.63 256z" /></svg></td>
+											:
+											providers[provider][category] === 'unlimited'
+											?
+											<td align="center" class="px-6 py-4 align-middle text-sm text-gray-400"><svg class="h-6" style="display: inline-flex;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 256s-48-96-126-96c-54.12 0-98 43-98 96s43.88 96 98 96c37.51 0 71-22.41 94-48M256 256s48 96 126 96c54.12 0 98-43 98-96s-43.88-96-98-96c-37.51 0-71 22.41-94 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" /></svg> *</td>
+											:
+											providers[provider][category] === 'question'
+											?
+											<td align="center" class="px-6 py-4 align-middle text-sm text-gray-400"><svg class="h-6" fill="#3b82f6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64zm-6 304a20 20 0 1120-20 20 20 0 01-20 20zm33.44-102C267.23 276.88 265 286.85 265 296a14 14 0 01-28 0c0-21.91 10.08-39.33 30.82-53.26C287.1 229.8 298 221.6 298 203.57c0-12.26-7-21.57-21.49-28.46-3.41-1.62-11-3.2-20.34-3.09-11.72.15-20.82 2.95-27.83 8.59C215.12 191.25 214 202.83 214 203a14 14 0 11-28-1.35c.11-2.43 1.8-24.32 24.77-42.8 11.91-9.58 27.06-14.56 45-14.78 12.7-.15 24.63 2 32.72 5.82C312.7 161.34 326 180.43 326 203.57c0 33.83-22.61 49.02-42.56 62.43z" /></svg></td>
+											:
+											<td align="center" class="px-6 py-4 align-middle text-sm text-gray-400"> {providers[provider][category]} </td>
+										))}
+									</tr>
+								))}
+							</tbody>
+						</table>
+					</div>
+					<p class="p-1 text-sm text-gray-500">Comparison data accurate as of {date}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

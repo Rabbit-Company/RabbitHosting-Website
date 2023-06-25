@@ -1,0 +1,13 @@
+---
+var { title, path, image } = Astro.props;
+---
+<li class="py-10 px-6 bg-gray-800 text-center rounded-lg">
+	<a href={path}>
+		<div class="space-y-6">
+			<img class="mx-auto h-40 w-40 xl:w-56 xl:h-56" src={image} alt={title}>
+			<div class="text-center text-lg leading-6 space-y-1">
+				<span class="text-white">{title}</span>
+			</div>
+		</div>
+	</a>
+</li>

@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../layouts/Navbar.astro";
+import Footer from "../layouts/Footer.astro";
+
+import ServicePreview from "../layouts/ServicePreview.astro";
+import Packages from "../layouts/Packages.astro";
+import Package from "../layouts/Package.astro";
+import EmptyComparison from "../layouts/EmptyComparison.astro";
+
+const sleepRabbit = ['6GB RAM', '200GB Nvme Storage', '2 dedicated Ryzen 9 7950X3D threads', '1Gbps internet speed', '20TB Traffic', 'Support included'];
+const fastRabbit = ['12GB RAM', '400GB Nvme Storage', '4 dedicated Ryzen 9 7950X3D threads', '1Gbps internet speed', '20TB Traffic', 'Support included'];
+const crazyRabbit = ['18GB RAM', '600GB Nvme Storage', '6 dedicated Ryzen 9 7950X3D threads', '1Gbps internet speed', '20TB Traffic', 'Support included'];
+
+---
+
+<Layout title="Rabbit Hosting - VPS Hosting" trustpilot sellix>
+	<Navbar active="vps"></Navbar>
+
+	<ServicePreview
+		title="VPS Hosting"
+		description="Virtual Private Server (VPS) is hosting that virtually mimics dedicated server environments within a shared server. VPS hosting has become a popular choice because it is generally lower in cost than dedicated hosting but provides better reliability, security, and performance than shared hosting."
+		image="/images/services/vps.svg">
+	</ServicePreview>
+
+	<Packages>
+		<Package
+			title="Sleepy Rabbit"
+			description="For most self-hosted projects."
+			price="10.00"
+			productID="64834e0c25be0"
+			template={sleepRabbit}
+			popular>
+		</Package>
+		<Package
+			title="Fast Rabbit"
+			description="For semi-demanding projects."
+			price="20.00"
+			productID="64834e6e8ddf8"
+			template={fastRabbit}>
+		</Package>
+		<Package
+			title="Crazy Rabbit"
+			description="For most demanding projects."
+			price="30.00"
+			productID="64834ebc2efa3"
+			template={crazyRabbit}>
+		</Package>
+	</Packages>
+
+	<EmptyComparison></EmptyComparison>
+
+	<Footer></Footer>
+	<script is:inline src="/js/default.js"></script>
+</Layout>

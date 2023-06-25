@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rabbit-hosting.com/sitemap-index.xml
