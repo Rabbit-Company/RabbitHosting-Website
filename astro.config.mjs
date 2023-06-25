@@ -5,5 +5,8 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  trailingSlash: 'never'
+  trailingSlash: 'never',
+  build: {
+    format: 'file'
+  }
 });
