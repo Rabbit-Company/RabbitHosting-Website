@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../layouts/Navbar.astro";
+import Footer from "../layouts/Footer.astro";
+
+import ServicePreview from "../layouts/ServicePreview.astro";
+import Packages from "../layouts/Packages.astro";
+import Package from "../layouts/Package.astro";
+import IncludedDomains from "../layouts/IncludedDomains.astro";
+import EmptyComparison from "../layouts/EmptyComparison.astro";
+
+const freeRabbit = ['1GB SSD Storage', '0 custom domain', '1 email boxes', '1 aliases', '100 messages per day', '50MB message size limit', '99.9% uptime guarantee', 'Support included'];
+const sleepRabbit = ['5GB SSD Storage', '1 custom domain', '5 email boxes', '5 aliases', '2500 messages per day', '50MB message size limit', '99.9% uptime guarantee', 'Support included'];
+const fastRabbit = ['25GB SSD Storage', '5 custom domain', '25 email boxes', '25 aliases', '12500 messages per day', '50MB message size limit', '99.9% uptime guarantee', 'Support included'];
+const crazyRabbit = ['50GB SSD Storage', '10 custom domain', '50 email boxes', '50 aliases', '25000 messages per day', '50MB message size limit', '99.9% uptime guarantee', 'Support included'];
+
+---
+
+<Layout title="Rabbit Hosting - Email Hosting" trustpilot sellix>
+	<Navbar></Navbar>
+
+	<ServicePreview
+		title="Email Hosting"
+		description="Email hosting services are usually premium services that differ from the typical free webmail sites such as Gmail and Hotmail. These hosting providers cater to more demanding users, who require high-email traffic and their own domain name in order to distinguish them more."
+		image="/images/services/email.svg">
+	</ServicePreview>
+
+	<Packages>
+		<Package
+			title="Free Rabbit"
+			description="For personal needs."
+			price="0.00"
+			productID="https://mail1.rabbit-hosting.com/admin/user/signup"
+			template={freeRabbit}
+			popular>
+		</Package>
+		<Package
+			title="Sleepy Rabbit"
+			description="For personal needs."
+			price="1.99"
+			productID="6483490ec96e9"
+			template={sleepRabbit}>
+		</Package>
+		<Package
+			title="Fast Rabbit"
+			description="For small-sized business needs."
+			price="6.99"
+			productID="64834994bdc36"
+			template={fastRabbit}>
+		</Package>
+		<Package
+			title="Crazy Rabbit"
+			description="For medium-sized business needs."
+			price="13.99"
+			productID="648349f7b4b07"
+			template={crazyRabbit}>
+		</Package>
+	</Packages>
+
+	<IncludedDomains></IncludedDomains>
+
+	<EmptyComparison></EmptyComparison>
+
+	<Footer></Footer>
+	<script is:inline src="/js/default.js"></script>
+</Layout>

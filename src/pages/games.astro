@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../layouts/Navbar.astro";
+import Footer from "../layouts/Footer.astro";
+
+import GamesLayout from "../layouts/Games.astro";
+import Game from "../layouts/Game.astro";
+---
+
+<Layout title="Rabbit Hosting - Games">
+	<Navbar active="games"></Navbar>
+	<GamesLayout>
+		<Game
+			title="Minecraft Hosting"
+			path="minecraft.html"
+			image="images/services/minecraft-logo.png">
+		</Game>
+		<Game
+			title="Terraria Hosting"
+			path="terraria.html"
+			image="images/services/terraria-logo.png">
+		</Game>
+		<Game
+			title="Unturned Hosting"
+			path="unturned.html"
+			image="images/services/unturned-logo.png">
+		</Game>
+	</GamesLayout>
+	<Footer></Footer>
+	<script is:inline src="/js/default.js"></script>
+</Layout>

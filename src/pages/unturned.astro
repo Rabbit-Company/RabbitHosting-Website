@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../layouts/Navbar.astro";
+import Footer from "../layouts/Footer.astro";
+
+import ServicePreview from "../layouts/ServicePreview.astro";
+import Packages from "../layouts/Packages.astro";
+import Package from "../layouts/Package.astro";
+import EmptyComparison from "../layouts/EmptyComparison.astro";
+
+---
+
+<Layout title="Rabbit Hosting - Unturned Hosting" trustpilot sellix>
+	<Navbar></Navbar>
+
+	<ServicePreview
+		title="Unturned Hosting"
+		description="Unturned is a free-to-play survival game developed by Smartly Dressed Games. It was released for Microsoft Windows, macOS, and Linux in July 2017. Unturned allows players to create custom maps using an in-game editor, cosmetics and mods can also be created using the game's engine Unity, and allows them to publish these creations on the Steam Workshop."
+		image="/images/services/unturned.png">
+	</ServicePreview>
+
+	<Packages>
+		<Package
+			title="Sleepy Rabbit"
+			description="For small Vanilla and small Semi-Vanilla Servers"
+			price="7.50"
+			productID="64834c5c5d740"
+			template="sleepy-rabbit"
+			popular>
+		</Package>
+		<Package
+			title="Fast Rabbit"
+			description="For Medium Vanilla/Semi-Vanilla and Small Modded Servers"
+			price="15.00"
+			productID="64834ceb0b4c2"
+			template="fast-rabbit">
+		</Package>
+		<Package
+			title="Crazy Rabbit"
+			description="For Large Vanilla/Semi-Vanilla Servers and Medium Modded Servers"
+			price="22.50"
+			productID="64834d46524b2"
+			template="crazy-rabbit">
+		</Package>
+		<Package
+			title="Turbo Rabbit"
+			description="For Large Vanilla/Semi-Vanilla Servers and Medium/Large Modded Servers."
+			price="30.00"
+			productID="64834da213e99"
+			template="turbo-rabbit">
+		</Package>
+	</Packages>
+
+	<EmptyComparison></EmptyComparison>
+
+	<Footer></Footer>
+	<script is:inline src="/js/default.js"></script>
+</Layout>

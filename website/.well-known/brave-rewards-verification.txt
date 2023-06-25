@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: rabbit-hosting.com
-Token: 5f11dfdf093d389fcb4b558b1c238bf5cd59a3fc02e087d52a3a21f321df0b3f

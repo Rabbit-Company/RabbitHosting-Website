@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../layouts/Navbar.astro";
+import Footer from "../layouts/Footer.astro";
+
+import ServicePreview from "../layouts/ServicePreview.astro";
+import Packages from "../layouts/Packages.astro";
+import Package from "../layouts/Package.astro";
+import EmptyComparison from "../layouts/EmptyComparison.astro";
+
+const sleepRabbit = ['1TB HDD Storage', 'Server-side encryption', 'RAID 6 configured', 'Unmetered Bandwidth*', 'NextCloud panel', 'Support included'];
+const fastRabbit = ['3TB HDD Storage', 'Server-side encryption', 'RAID 6 configured', 'Unmetered Bandwidth*', 'NextCloud panel', 'Support included'];
+const crazyRabbit = ['7TB HDD Storage', 'Server-side encryption', 'RAID 6 configured', 'Unmetered Bandwidth*', 'NextCloud panel', 'Support included'];
+
+---
+
+<Layout title="Rabbit Hosting - Storage Hosting" trustpilot sellix>
+	<Navbar></Navbar>
+
+	<ServicePreview
+		title="Storage Hosting"
+		description="Storage hosting is a service that allows organizations and individuals to store and share their data with others. For privacy reasons, we do encrypt your files on our servers."
+		image="/images/services/cloud.svg">
+	</ServicePreview>
+
+	<Packages>
+		<Package
+			title="Sleepy Rabbit"
+			description="For personal needs."
+			price="4.99"
+			productID="64834ad9de72d"
+			template={sleepRabbit}
+			popular>
+		</Package>
+		<Package
+			title="Fast Rabbit"
+			description="For small-sized business needs."
+			price="9.99"
+			productID="64834b477de0c"
+			template={fastRabbit}>
+		</Package>
+		<Package
+			title="Crazy Rabbit"
+			description="For medium-sized business needs."
+			price="19.99"
+			productID="64834b98d9031"
+			template={crazyRabbit}>
+		</Package>
+	</Packages>
+
+	<EmptyComparison></EmptyComparison>
+
+	<Footer></Footer>
+	<script is:inline src="/js/default.js"></script>
+</Layout>
