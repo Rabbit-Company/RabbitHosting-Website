@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../layouts/Navbar.astro";
+import Footer from "../layouts/Footer.astro";
+
+import ServicePreview from "../layouts/ServicePreview.astro";
+import Packages from "../layouts/Packages.astro";
+import Package from "../layouts/Package.astro";
+import EmptyComparison from "../layouts/EmptyComparison.astro";
+
+---
+
+<Layout title="Rabbit Hosting - Arma 3 Hosting" trustpilot sellix>
+	<Navbar></Navbar>
+
+	<ServicePreview
+		title="Arma 3 Hosting"
+		description="An open world military tactical shooter video game developed and published by Bohemia Interactive exclusively through the Steam distribution platform."
+		image="/images/services/arma3.jpg">
+	</ServicePreview>
+
+	<Packages>
+		<Package
+			title="Sleepy Rabbit"
+			description="For small-sized Arma servers."
+			price="7.50"
+			productID="64caa19e668e9"
+			template="sleepy-rabbit"
+			popular>
+		</Package>
+		<Package
+			title="Fast Rabbit"
+			description="For medium-sized Arma servers."
+			price="15.00"
+			productID="64caa2392bbbe"
+			template="fast-rabbit">
+		</Package>
+		<Package
+			title="Crazy Rabbit"
+			description="For large-sized Arma servers."
+			price="22.50"
+			productID="64caa2ba6107c"
+			template="crazy-rabbit">
+		</Package>
+		<Package
+			title="Turbo Rabbit"
+			description="In our opinion too much for Arma."
+			price="30.00"
+			productID="64caa3456c256"
+			template="turbo-rabbit">
+		</Package>
+		<Package
+			title="Insane Rabbit"
+			description="In our opinion too much for Arma."
+			price="37.50"
+			productID="64caa3b7ac721"
+			template="insane-rabbit">
+		</Package>
+	</Packages>
+
+	<EmptyComparison></EmptyComparison>
+
+	<Footer></Footer>
+	<script is:inline src="/js/default.js"></script>
+</Layout>
