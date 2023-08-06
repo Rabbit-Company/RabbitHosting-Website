@@ -1,0 +1,55 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../layouts/Navbar.astro";
+import Footer from "../../layouts/Footer.astro";
+
+import ServicePreview from "../../layouts/ServicePreview.astro";
+import Packages from "../../layouts/Packages.astro";
+import Package from "../../layouts/Package.astro";
+import EmptyComparison from "../../layouts/EmptyComparison.astro";
+
+const sleepRabbit = ['1GB RAM', '15GB Nvme Storage', '0.25 dedicated Ryzen 9 7950X3D thread', '1 database included', '1 backup included', 'Pterodactyl panel'];
+const fastRabbit = ['3GB RAM', '45GB Nvme Storage', '0.75 dedicated Ryzen 9 7950X3D thread', '1 database included', '1 backup included', 'Pterodactyl panel'];
+const crazyRabbit = ['5GB RAM', '75GB Nvme Storage', '1.25 dedicated Ryzen 9 7950X3D thread', '2 database included', '2 backup included', 'Pterodactyl panel'];
+
+---
+
+<Layout title="Rabbit Hosting - Mumble Server Hosting" trustpilot sellix>
+    <Navbar active="mumble"></Navbar>
+
+    <ServicePreview
+        title="Mumble Server Hosting"
+        description="Mumble was the first VoIP application to establish true low latency voice communication over a decade ago. But low latency and gaming are not the only use cases it shines in"
+        image="/images/services/Mumble-open-source-voice-chat-app.webp">
+    </ServicePreview>
+
+    <Packages>
+        <Package
+            title="Sleepy Rabbit"
+            description="For small-sized Mumble servers."
+            price="1.50"
+            productID="64cdf4c1a4cb0"
+            template={sleepRabbit}>
+        </Package>
+        <Package
+            title="Fast Rabbit"
+            description="For medium-sized Mumble servers."
+            price="4.50"
+            productID="64ce12899b9f9"
+            template={fastRabbit}
+            popular>
+        </Package>
+        <Package
+            title="Crazy Rabbit"
+            description="For large-sized Mumble servers."
+            price="7.50"
+            productID="64ce3d5328b8b"
+            template={crazyRabbit}>
+        </Package>
+    </Packages>
+
+    <EmptyComparison></EmptyComparison>
+
+    <Footer></Footer>
+    <script is:inline src="/js/default.js"></script>
+</Layout>

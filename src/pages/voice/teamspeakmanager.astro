@@ -1,12 +1,12 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Navbar from "../layouts/Navbar.astro";
-import Footer from "../layouts/Footer.astro";
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../layouts/Navbar.astro";
+import Footer from "../../layouts/Footer.astro";
 
-import ServicePreview from "../layouts/ServicePreview.astro";
-import Packages from "../layouts/Packages.astro";
-import Package from "../layouts/Package.astro";
-import EmptyComparison from "../layouts/EmptyComparison.astro";
+import ServicePreview from "../../layouts/ServicePreview.astro";
+import Packages from "../../layouts/Packages.astro";
+import Package from "../../layouts/Package.astro";
+import EmptyComparison from "../../layouts/EmptyComparison.astro";
 
 const sleepRabbit = ['1GB RAM', '15GB Nvme Storage', '0.25 dedicated Ryzen 9 7950X3D thread', '1 database included', '1 backup included', 'Pterodactyl panel'];
 const fastRabbit = ['3GB RAM', '45GB Nvme Storage', '0.75 dedicated Ryzen 9 7950X3D thread', '1 database included', '1 backup included', 'Pterodactyl panel'];
@@ -14,13 +14,13 @@ const crazyRabbit = ['5GB RAM', '75GB Nvme Storage', '1.25 dedicated Ryzen 9 795
 
 ---
 
-<Layout title="Rabbit Hosting - TeamSpeak Server Hosting" trustpilot sellix>
-    <Navbar active="teamspeak"></Navbar>
+<Layout title="Rabbit Hosting - TeamSpeak Managment Server Hosting" trustpilot sellix>
+    <Navbar active="teamspeakmanager"></Navbar>
 
     <ServicePreview
-        title="TeamSpeak Server Hosting"
-        description="TeamSpeak (TS) is a proprietary voice-over-Internet Protocol (VoIP) application for audio communication between users on a chat channel, much like a telephone conference call"
-        image="/images/services/teamspeak.svg">
+        title="TeamSpeak Managment Server Hosting"
+        description="The Open Source Webinterface For TeamSpeak Servers"
+        image="/images/services/teamspeak3m.svg">
     </ServicePreview>
 
     <Packages>
@@ -28,14 +28,14 @@ const crazyRabbit = ['5GB RAM', '75GB Nvme Storage', '1.25 dedicated Ryzen 9 795
             title="Sleepy Rabbit"
             description="For small-sized TeamSpeak servers."
             price="1.50"
-            productID="64cdf4c1a4cb0"
+            productID="64cf13ffbaec7"
             template={sleepRabbit}>
         </Package>
         <Package
             title="Fast Rabbit"
             description="For medium-sized TeamSpeak servers."
             price="4.50"
-            productID="64ce12899b9f9"
+            productID="64cf149c0e781"
             template={fastRabbit}
             popular>
         </Package>
@@ -43,7 +43,7 @@ const crazyRabbit = ['5GB RAM', '75GB Nvme Storage', '1.25 dedicated Ryzen 9 795
             title="Crazy Rabbit"
             description="For large-sized TeamSpeak servers."
             price="7.50"
-            productID="64ce3d5328b8b"
+            productID="64cf14f413c6d"
             template={crazyRabbit}>
         </Package>
     </Packages>
