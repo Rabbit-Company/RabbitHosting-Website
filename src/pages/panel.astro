@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../layouts/Navbar.astro";
+import Footer from "../layouts/Footer.astro";
+---
+
+<style>
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #ffffff;
+      text-align: center;
+    }
+  
+    .option {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  
+    .option-label {
+      font-size: 18px;
+      color: #ffffff;
+    }
+  
+    .option-button {
+      background-color: #667eea;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+  
+    .option-button:hover {
+      background-color: #5a67d8;
+    }
+  
+    .option-button:focus {
+      outline: none;
+    }
+  
+    .option-button:active {
+      transform: translateY(1px);
+    }
+    .spacer {
+  margin-top: 20px; /* You can adjust this value to add more or less space */
+}
+
+  </style>
+  
+  <Layout title="Redirect Page">
+    <Navbar active="home" />
+    <main>
+        <h1 class="text-5xl font-extrabold text-white sm:text-center">What Panel Do You Want to Go To?</h1>
+      <div></div>
+      <div class="spacer"></div>
+      <div class="option">
+        <a class="option-button" href="https://eu2.rabbit-hosting.com/">EU Panel</a>
+      </div>
+      <div class="option">
+        <a class="option-button" href="https://us.rabbit-hosting.com/">US Panel</a>
+      </div>
+    </main>
+    <Footer />
+  </Layout>
+  
