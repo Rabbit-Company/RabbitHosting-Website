@@ -1,5 +1,7 @@
 ---
 const { active } = Astro.props;
+const contactLinkStyle = "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium";
+const activeContactLinkStyle = "bg-gray-900 text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium";
 ---
 
 <nav class="bg-gray-800">
@@ -23,12 +25,13 @@ const { active } = Astro.props;
 								<div class="absolute z-10 mt-3 px-2 w-screen max-w-xs sm:px-0">
 									<div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-50 overflow-hidden">
 										<div class="relative grid gap-6 bg-gray-800 px-5 py-6 sm:gap-8 sm:p-8">
-											{ active === "games" ? <a href="/games" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Game Hosting </p></a> : <a href="/games" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Game Hosting </p></a> }
-											{ active === "website" ? <a href="/website" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Website Hosting </p></a> : <a href="/website" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Website Hosting </p></a> }
-											{ active === "email" ? <a href="/email" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Email Hosting </p></a> : <a href="/email" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Email Hosting </p></a> }
-											{ active === "storage" ? <a href="/storage" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Storage Hosting </p></a> : <a href="/storage" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Storage Hosting </p></a> }
-											{ active === "discordbot" ? <a href="/discordbot" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Discord Bot Hosting </p></a> : <a href="/discordbot" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Discord Bot Hosting </p></a> }
-											{ active === "vps" ? <a href="/storage" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> VPS Hosting </p></a> : <a href="/vps" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> VPS Hosting </p></a> }
+											{ active === "games" ? <a href="/services/games" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Game Hosting </p></a> : <a href="/services/games" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Game Hosting </p></a> }
+											{ active === "website" ? <a href="/services/website" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Website Hosting </p></a> : <a href="/services/website" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Website Hosting </p></a> }
+											{ active === "email" ? <a href="/services/email" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Email Hosting </p></a> : <a href="/services/email" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Email Hosting </p></a> }
+											{ active === "storage" ? <a href="/services/storage" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Storage Hosting </p></a> : <a href="/services/storage" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Storage Hosting </p></a> }
+											{ active === "discordbot" ? <a href="/discord/discordbot" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Discord Bot Hosting </p></a> : <a href="/discord/discordbot" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Discord Bot Hosting </p></a> }
+											{ active === "vps" ? <a href="/services/storage" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> VPS Hosting </p></a> : <a href="/services/vps" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> VPS Hosting </p></a> }
+											{ active === "voices" ? <a href="/services/voice" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Voice Server Hosting </p></a> : <a href="/services/voice" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Voice Server Hosting </p></a> }
 										</div>
 									</div>
 								</div>
@@ -41,6 +44,7 @@ const { active } = Astro.props;
 			</div>
 			<div class="hidden md:flex space-x-4 items-center justify-end md:flex-1 lg:w-0">
 				<a href="https://status.rabbit-company.com/status/rabbithosting" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Status</a>
+				<a href="/panel" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Panel</a>
 				<a href="https://store.rabbit-hosting.com/customer/auth" target="_blank" class="bg-indigo-600 text-gray-100 hover:bg-indigo-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sign in</a>
 			</div>
 			<div class="-mr-2 flex sm:hidden">
@@ -67,12 +71,13 @@ const { active } = Astro.props;
 					<div class="absolute z-10 mt-3 px-2 w-screen max-w-xs sm:px-0">
 						<div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-50 overflow-hidden">
 							<div class="relative grid gap-6 bg-gray-800 px-5 py-6 sm:gap-8 sm:p-8">
-								{ active === "games" ? <a href="/games" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Game Hosting </p></a> : <a href="/games" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Game Hosting </p></a> }
-								{ active === "website" ? <a href="/website" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Website Hosting </p></a> : <a href="/website" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Website Hosting </p></a> }
-								{ active === "email" ? <a href="/email" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Email Hosting </p></a> : <a href="/email" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Email Hosting </p></a> }
-								{ active === "storage" ? <a href="/storage" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Storage Hosting </p></a> : <a href="/storage" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Storage Hosting </p></a> }
-								{ active === "discordbot" ? <a href="/discordbot" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Discord Bot Hosting </p></a> : <a href="/discordbot" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Discord Bot Hosting </p></a> }
-								{ active === "vps" ? <a href="/vps" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> VPS Hosting </p></a> : <a href="/vps" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> VPS Hosting </p></a> }
+								{ active === "games" ? <a href="/services/games" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Game Hosting </p></a> : <a href="/services/games" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Game Hosting </p></a> }
+								{ active === "website" ? <a href="/services/website" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Website Hosting </p></a> : <a href="/services/website" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Website Hosting </p></a> }
+								{ active === "email" ? <a href="/services/email" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Email Hosting </p></a> : <a href="/services/email" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Email Hosting </p></a> }
+								{ active === "storage" ? <a href="/services/storage" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Storage Hosting </p></a> : <a href="/services/storage" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Storage Hosting </p></a> }
+								{ active === "discordbot" ? <a href="/discord/discordbot" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Discord Bot Hosting </p></a> : <a href="/discord/discordbot" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Discord Bot Hosting </p></a> }
+								{ active === "vps" ? <a href="/services/vps" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> VPS Hosting </p></a> : <a href="/services/vps" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> VPS Hosting </p></a> }
+								{ active === "voices" ? <a href="/services/voice" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Voice Server Hosting </p></a> : <a href="/services/voice" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Voice Server Hosting </p></a> }
 							</div>
 						</div>
 					</div>
@@ -81,6 +86,7 @@ const { active } = Astro.props;
 			{ active === "donation" ? <a href="/donation" class="bg-gray-900 text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium">Donation</a> : <a href="/donation" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Donation</a> }
 			{ active === "contact" ? <a href="/contact" class="bg-gray-900 text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a> : <a href="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a> }
 			<a href="https://status.rabbit-company.com/status/rabbithosting" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Status</a>
+			<a href="/panel" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Panel</a>
 			<a href="https://store.rabbit-hosting.com/customer/auth" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Sign in</a>
 		</div>
 	</div>
