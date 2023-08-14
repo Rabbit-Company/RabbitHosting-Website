@@ -8,48 +8,68 @@ import Packages from "../../layouts/Packages.astro";
 import Package from "../../layouts/Package.astro";
 import EmptyComparison from "../../layouts/EmptyComparison.astro";
 
-const sleepRabbit = ['1GB RAM', '15GB Nvme Storage', '0.25 dedicated Ryzen 9 7950X3D thread', '1 database included', '1 backup included', 'Pterodactyl panel'];
-const fastRabbit = ['3GB RAM', '45GB Nvme Storage', '0.75 dedicated Ryzen 9 7950X3D thread', '1 database included', '1 backup included', 'Pterodactyl panel'];
-const crazyRabbit = ['5GB RAM', '75GB Nvme Storage', '1.25 dedicated Ryzen 9 7950X3D thread', '2 database included', '2 backup included', 'Pterodactyl panel'];
-
+const sleepRabbit = [
+	"1GB RAM",
+	"15GB Nvme Storage",
+	"0.25 dedicated Ryzen 9 7950X3D thread",
+	"1 database included",
+	"1 backup included",
+	"Pterodactyl panel",
+];
+const fastRabbit = [
+	"3GB RAM",
+	"45GB Nvme Storage",
+	"0.75 dedicated Ryzen 9 7950X3D thread",
+	"1 database included",
+	"1 backup included",
+	"Pterodactyl panel",
+];
+const crazyRabbit = [
+	"5GB RAM",
+	"75GB Nvme Storage",
+	"1.25 dedicated Ryzen 9 7950X3D thread",
+	"2 database included",
+	"2 backup included",
+	"Pterodactyl panel",
+];
 ---
 
 <Layout title="Rabbit Hosting - TeaSpeak Server Hosting" trustpilot sellix>
-    <Navbar active="teaspeak"></Navbar>
+	<Navbar active="teaspeak" />
 
-    <ServicePreview
-        title="TeaSpeak Server Hosting"
-        description="TeaSpeak is a free to use client and server software for VoIP communication. It is the ideal deal software for everyone who is annoyed about limits and restrictions."
-        image="/images/services/teaspeak.png">
-    </ServicePreview>
+	<ServicePreview
+		title="TeaSpeak Server Hosting"
+		description="TeaSpeak is a free to use client and server software for VoIP communication. It is the ideal deal software for everyone who is annoyed about limits and restrictions."
+		image="/images/services/teaspeak.png"
+	/>
 
-    <Packages>
-        <Package
-            title="Sleepy Rabbit"
-            description="For small-sized TeaSpeak servers."
-            price="1.50"
-            productID="64cf5c5c8fd12"
-            template={sleepRabbit}>
-        </Package>
-        <Package
-            title="Fast Rabbit"
-            description="For medium-sized TeaSpeak servers."
-            price="4.50"
-            productID="64cf5cc5e22f8"
-            template={fastRabbit}
-            popular>
-        </Package>
-        <Package
-            title="Crazy Rabbit"
-            description="For large-sized TeaSpeak servers."
-            price="7.50"
-            productID="64ce3d5328b8b"
-            template={crazyRabbit}>
-        </Package>
-    </Packages>
+	<Packages>
+		<Package
+			title="Sleepy Rabbit"
+			description="For small-sized TeaSpeak servers."
+			price="1.50"
+			productID="64cf5c5c8fd12"
+			template={sleepRabbit}
+		/>
+		<Package
+			title="Fast Rabbit"
+			description="For medium-sized TeaSpeak servers."
+			price="4.50"
+			productID="64cf5cc5e22f8"
+			template={fastRabbit}
+			popular
+		/>
+		<Package
+			title="Crazy Rabbit"
+			description="For large-sized TeaSpeak servers."
+			price="7.50"
+			productID="64ce3d5328b8b"
+			template={crazyRabbit}
+		/>
+	</Packages>
 
-    <EmptyComparison></EmptyComparison>
+	<EmptyComparison />
 
-    <Footer></Footer>
-    <script is:inline src="/js/default.js"></script>
+	<Footer />
+	<script is:inline src="/js/default.js"></script>
 </Layout>

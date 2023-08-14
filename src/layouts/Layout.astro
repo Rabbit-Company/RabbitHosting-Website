@@ -1,26 +1,57 @@
 ---
-const { title = "Rabbit Hosting", trustpilot = false, sellix = false } = Astro.props;
+const {
+	title = "Rabbit Hosting",
+	trustpilot = false,
+	sellix = false,
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="UTF-8" />
 		<title>{title}</title>
-		<meta name="description" content="Rabbit Hosting is one of the most affordable hosting provider in the world!">
-		<meta name="keywords" content="Rabbit Company, rabbit company, Rabbit Hosting, rabbit hosting, website hosting, website, hosting, minecraft, minecraft plugins, plugins, admin gui, passky">
-		<meta name="author" content="Rabbit Company">
-		<link rel="shortcut icon" type="image/png" href="/images/logo.png"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta
+			name="description"
+			content="Rabbit Hosting is one of the most affordable hosting provider in the world!"
+		/>
+		<meta
+			name="keywords"
+			content="Rabbit Company, rabbit company, Rabbit Hosting, rabbit hosting, website hosting, website, hosting, minecraft, minecraft plugins, plugins, admin gui, passky"
+		/>
+		<meta name="author" content="Rabbit Company" />
+		<link rel="shortcut icon" type="image/png" href="/images/logo.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="/css/index.css" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
-		<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href.replace(".html", "")} />
-		{ sellix && <link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet"/> }
-		{ trustpilot && <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script> }
+		<link
+			rel="canonical"
+			href={new URL(Astro.url.pathname, Astro.site).href.replace(".html", "")}
+		/>
+		{
+			sellix && (
+				<link
+					href="https://cdn.sellix.io/static/css/embed.css"
+					rel="stylesheet"
+				/>
+			)
+		}
+		{
+			trustpilot && (
+				<script
+					type="text/javascript"
+					src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+					async
+				/>
+			)
+		}
 	</head>
 	<body class="bg-gray-800">
 		<slot />
-		{ sellix && <script src="https://cdn.sellix.io/static/js/embed.js"></script> }
-		<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1c378391d90a40209e1eb323e30d6c8f"}'></script>
+		{sellix && <script src="https://cdn.sellix.io/static/js/embed.js" />}
+		<script
+			defer
+			src="https://static.cloudflareinsights.com/beacon.min.js"
+			data-cf-beacon='{"token": "1c378391d90a40209e1eb323e30d6c8f"}'></script>
 	</body>
 </html>

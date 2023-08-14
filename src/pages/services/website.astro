@@ -8,20 +8,52 @@ import Packages from "../../layouts/Packages.astro";
 import Package from "../../layouts/Package.astro";
 import EmptyComparison from "../../layouts/EmptyComparison.astro";
 
-const sleepRabbit = ['3 Hosted Domains', '5GB SSD Storage', '3 subdomains included', '3 databases included', '3 FTP users included', '3 cron jobs included', 'Free SSL certificates', 'Unmetered Bandwidth', 'ISPConfig panel', 'Support included'];
-const fastRabbit = ['15 Hosted Domains', '25GB SSD Storage', '15 subdomains included', '15 databases included', '15 FTP users included', '15 cron jobs included', 'Free SSL certificates', 'Unmetered Bandwidth', 'ISPConfig panel', 'Support included'];
-const crazyRabbit = ['30 Hosted Domains', '50GB SSD Storage', '30 subdomains included', '30 databases included', '30 FTP users included', '30 cron jobs included', 'Free SSL certificates', 'Unmetered Bandwidth', 'ISPConfig panel', 'Support included'];
-
+const sleepRabbit = [
+	"3 Hosted Domains",
+	"5GB SSD Storage",
+	"3 subdomains included",
+	"3 databases included",
+	"3 FTP users included",
+	"3 cron jobs included",
+	"Free SSL certificates",
+	"Unmetered Bandwidth",
+	"ISPConfig panel",
+	"Support included",
+];
+const fastRabbit = [
+	"15 Hosted Domains",
+	"25GB SSD Storage",
+	"15 subdomains included",
+	"15 databases included",
+	"15 FTP users included",
+	"15 cron jobs included",
+	"Free SSL certificates",
+	"Unmetered Bandwidth",
+	"ISPConfig panel",
+	"Support included",
+];
+const crazyRabbit = [
+	"30 Hosted Domains",
+	"50GB SSD Storage",
+	"30 subdomains included",
+	"30 databases included",
+	"30 FTP users included",
+	"30 cron jobs included",
+	"Free SSL certificates",
+	"Unmetered Bandwidth",
+	"ISPConfig panel",
+	"Support included",
+];
 ---
 
 <Layout title="Rabbit Hosting - Website Hosting" trustpilot sellix>
-	<Navbar active="website"></Navbar>
+	<Navbar active="website" />
 
 	<ServicePreview
 		title="Website Hosting"
 		description="Website hosting is a service that allows organizations and individuals to post a website or web page onto the Internet. We do require that you own your domain in order to host with us. If you do not have a domain, we will help you purchase one."
-		image="/images/services/website.svg">
-	</ServicePreview>
+		image="/images/services/website.svg"
+	/>
 
 	<Packages>
 		<Package
@@ -30,26 +62,26 @@ const crazyRabbit = ['30 Hosted Domains', '50GB SSD Storage', '30 subdomains inc
 			price="1.99"
 			productID="6483446583e38"
 			template={sleepRabbit}
-			popular>
-		</Package>
+			popular
+		/>
 		<Package
 			title="Fast Rabbit"
 			description="For small-sized business websites."
 			price="6.99"
 			productID="64834706ebad7"
-			template={fastRabbit}>
-		</Package>
+			template={fastRabbit}
+		/>
 		<Package
 			title="Crazy Rabbit"
 			description="For medium-sized business websites."
 			price="13.99"
 			productID="64834860ce455"
-			template={crazyRabbit}>
-		</Package>
+			template={crazyRabbit}
+		/>
 	</Packages>
 
-	<EmptyComparison></EmptyComparison>
+	<EmptyComparison />
 
-	<Footer></Footer>
+	<Footer />
 	<script is:inline src="/js/default.js"></script>
 </Layout>

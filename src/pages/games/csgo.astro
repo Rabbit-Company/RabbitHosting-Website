@@ -7,17 +7,16 @@ import ServicePreview from "../../layouts/ServicePreview.astro";
 import Packages from "../../layouts/Packages.astro";
 import Package from "../../layouts/Package.astro";
 import EmptyComparison from "../../layouts/EmptyComparison.astro";
-
 ---
 
 <Layout title="Rabbit Hosting - CSGO Hosting" trustpilot sellix>
-	<Navbar></Navbar>
+	<Navbar />
 
 	<ServicePreview
 		title="CSGO Hosting"
 		description="Counter-Strike: Global Offensive is a multiplayer first-person shooter video game developed by Hidden Path Entertainment and Valve Corporation."
-		image="/images/services/csgo.jpg">
-	</ServicePreview>
+		image="/images/services/csgo.jpg"
+	/>
 
 	<Packages>
 		<Package
@@ -26,40 +25,40 @@ import EmptyComparison from "../../layouts/EmptyComparison.astro";
 			price="7.50"
 			productID="64993cbedf152"
 			template="sleepy-rabbit"
-			popular>
-		</Package>
+			popular
+		/>
 		<Package
 			title="Fast Rabbit"
 			description="For medium-sized CSGO servers."
 			price="15.00"
 			productID="64993da10b7e7"
-			template="fast-rabbit">
-		</Package>
+			template="fast-rabbit"
+		/>
 		<Package
 			title="Crazy Rabbit"
 			description="For large-sized CSGO servers."
 			price="22.50"
 			productID="64993e04028b7"
-			template="crazy-rabbit">
-		</Package>
+			template="crazy-rabbit"
+		/>
 		<Package
 			title="Turbo Rabbit"
 			description="In our opinion too much for CSGO."
 			price="30.00"
 			productID="64993e522a5f1"
-			template="turbo-rabbit">
-		</Package>
+			template="turbo-rabbit"
+		/>
 		<Package
 			title="Insane Rabbit"
 			description="In our opinion too much for CSGO."
 			price="37.50"
 			productID="64993e9e8b3b0"
-			template="insane-rabbit">
-		</Package>
+			template="insane-rabbit"
+		/>
 	</Packages>
 
-	<EmptyComparison></EmptyComparison>
+	<EmptyComparison />
 
-	<Footer></Footer>
+	<Footer />
 	<script is:inline src="/js/default.js"></script>
 </Layout>
