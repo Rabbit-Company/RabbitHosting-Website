@@ -7,17 +7,16 @@ import ServicePreview from "../../layouts/ServicePreview.astro";
 import Packages from "../../layouts/Packages.astro";
 import Package from "../../layouts/Package.astro";
 import EmptyComparison from "../../layouts/EmptyComparison.astro";
-
 ---
 
 <Layout title="Rabbit Hosting - Arma 3 Hosting" trustpilot sellix>
-	<Navbar></Navbar>
+	<Navbar />
 
 	<ServicePreview
 		title="Arma 3 Hosting"
 		description="An open world military tactical shooter video game developed and published by Bohemia Interactive exclusively through the Steam distribution platform."
-		image="/images/services/arma3.jpg">
-	</ServicePreview>
+		image="/images/services/arma3.jpg"
+	/>
 
 	<Packages>
 		<Package
@@ -26,40 +25,40 @@ import EmptyComparison from "../../layouts/EmptyComparison.astro";
 			price="7.50"
 			productID="64caa19e668e9"
 			template="sleepy-rabbit"
-			popular>
-		</Package>
+			popular
+		/>
 		<Package
 			title="Fast Rabbit"
 			description="For medium-sized Arma servers."
 			price="15.00"
 			productID="64caa2392bbbe"
-			template="fast-rabbit">
-		</Package>
+			template="fast-rabbit"
+		/>
 		<Package
 			title="Crazy Rabbit"
 			description="For large-sized Arma servers."
 			price="22.50"
 			productID="64caa2ba6107c"
-			template="crazy-rabbit">
-		</Package>
+			template="crazy-rabbit"
+		/>
 		<Package
 			title="Turbo Rabbit"
 			description="In our opinion too much for Arma."
 			price="30.00"
 			productID="64caa3456c256"
-			template="turbo-rabbit">
-		</Package>
+			template="turbo-rabbit"
+		/>
 		<Package
 			title="Insane Rabbit"
 			description="In our opinion too much for Arma."
 			price="37.50"
 			productID="64caa3b7ac721"
-			template="insane-rabbit">
-		</Package>
+			template="insane-rabbit"
+		/>
 	</Packages>
 
-	<EmptyComparison></EmptyComparison>
+	<EmptyComparison />
 
-	<Footer></Footer>
+	<Footer />
 	<script is:inline src="/js/default.js"></script>
 </Layout>

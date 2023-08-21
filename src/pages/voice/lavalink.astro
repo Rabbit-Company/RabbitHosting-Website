@@ -8,48 +8,68 @@ import Packages from "../../layouts/Packages.astro";
 import Package from "../../layouts/Package.astro";
 import EmptyComparison from "../../layouts/EmptyComparison.astro";
 
-const sleepRabbit = ['1GB RAM', '15GB Nvme Storage', '0.25 dedicated Ryzen 9 7950X3D thread', '1 database included', '1 backup included', 'Pterodactyl panel'];
-const fastRabbit = ['3GB RAM', '45GB Nvme Storage', '0.75 dedicated Ryzen 9 7950X3D thread', '1 database included', '1 backup included', 'Pterodactyl panel'];
-const crazyRabbit = ['5GB RAM', '75GB Nvme Storage', '1.25 dedicated Ryzen 9 7950X3D thread', '2 database included', '2 backup included', 'Pterodactyl panel'];
-
-
+const sleepRabbit = [
+	"1GB RAM",
+	"15GB Nvme Storage",
+	"0.25 dedicated Ryzen 9 7950X3D thread",
+	"1 database included",
+	"1 backup included",
+	"Pterodactyl panel",
+];
+const fastRabbit = [
+	"3GB RAM",
+	"45GB Nvme Storage",
+	"0.75 dedicated Ryzen 9 7950X3D thread",
+	"1 database included",
+	"1 backup included",
+	"Pterodactyl panel",
+];
+const crazyRabbit = [
+	"5GB RAM",
+	"75GB Nvme Storage",
+	"1.25 dedicated Ryzen 9 7950X3D thread",
+	"2 database included",
+	"2 backup included",
+	"Pterodactyl panel",
+];
 ---
+
 <Layout title="Rabbit Hosting - Lavalink Server Hosting" trustpilot sellix>
-    <Navbar active="lavalink"></Navbar>
+	<Navbar active="lavalink" />
 
-    <ServicePreview
-        title="Lavalink Server Hosting"
-        description="Lavalink is a powerful music server built for seamless audio streaming in Discord bots and other applications."
-        image="/images/services/lavalink.svg">
-    </ServicePreview>
+	<ServicePreview
+		title="Lavalink Server Hosting"
+		description="Lavalink is a powerful music server built for seamless audio streaming in Discord bots and other applications."
+		image="/images/services/lavalink.svg"
+	/>
 
-    <Packages>
-        <Package
-            title="Sleepy Rabbit"
-            description="For small-sized Lavalink Servers"
-            price="1.50"
-            productID="64ce3e8a2ed9d"
-            template={sleepRabbit}>
-        </Package>
-        <Package
-            title="Fast Rabbit"
-            description="For medium-sized Lavalink servers."
-            price="4.50"
-            productID="64ce3ede1b472"
-            template={fastRabbit}
-            popular>
-        </Package>
-        <Package
-            title="Crazy Rabbit"
-            description="For large-sized Lavalink servers."
-            price="7.50"
-            productID="64ce3f58b5ed8"
-            template={crazyRabbit}>
-        </Package>
-    </Packages>
+	<Packages>
+		<Package
+			title="Sleepy Rabbit"
+			description="For small-sized Lavalink Servers"
+			price="1.50"
+			productID="64ce3e8a2ed9d"
+			template={sleepRabbit}
+		/>
+		<Package
+			title="Fast Rabbit"
+			description="For medium-sized Lavalink servers."
+			price="4.50"
+			productID="64ce3ede1b472"
+			template={fastRabbit}
+			popular
+		/>
+		<Package
+			title="Crazy Rabbit"
+			description="For large-sized Lavalink servers."
+			price="7.50"
+			productID="64ce3f58b5ed8"
+			template={crazyRabbit}
+		/>
+	</Packages>
 
-    <EmptyComparison></EmptyComparison>
+	<EmptyComparison />
 
-    <Footer></Footer>
-    <script is:inline src="/js/default.js"></script>
+	<Footer />
+	<script is:inline src="/js/default.js"></script>
 </Layout>

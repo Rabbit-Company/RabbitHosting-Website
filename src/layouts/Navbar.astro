@@ -1,7 +1,9 @@
 ---
 const { active } = Astro.props;
-const contactLinkStyle = "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium";
-const activeContactLinkStyle = "bg-gray-900 text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium";
+const contactLinkStyle =
+	"text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium";
+const activeContactLinkStyle =
+	"bg-gray-900 text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium";
 ---
 
 <nav class="bg-gray-800">
@@ -9,49 +11,307 @@ const activeContactLinkStyle = "bg-gray-900 text-white hover:text-white block px
 		<div class="flex items-center justify-between h-16">
 			<div class="flex items-center">
 				<div class="flex-shrink-0">
-					<img class="block h-8 w-auto" src="/images/logo.png" alt="Rabbit Hosting">
+					<img
+						class="block h-8 w-auto"
+						src="/images/logo.png"
+						alt="Rabbit Hosting"
+					/>
 				</div>
 				<div class="hidden sm:block sm:ml-6">
 					<div class="flex space-x-4">
-						{ active === "home" ? <a href="/" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Home</a> : <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a> }
+						{
+							active === "home" ? (
+								<a
+									href="/"
+									class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+								>
+									Home
+								</a>
+							) : (
+								<a
+									href="/"
+									class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+								>
+									Home
+								</a>
+							)
+						}
 						<div class="relative">
-							<button id="service-menu-btn" type="button" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium group inline-flex items-center focus:outline-none" aria-expanded="false">
+							<button
+								id="service-menu-btn"
+								type="button"
+								class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium group inline-flex items-center focus:outline-none"
+								aria-expanded="false"
+							>
 								<span>Services</span>
-								<svg class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-									<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+								<svg
+									class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 20 20"
+									fill="currentColor"
+									aria-hidden="true"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+										clip-rule="evenodd"></path>
 								</svg>
 							</button>
 							<div class="hidden" id="service-menu">
 								<div class="absolute z-10 mt-3 px-2 w-screen max-w-xs sm:px-0">
-									<div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-50 overflow-hidden">
-										<div class="relative grid gap-6 bg-gray-800 px-5 py-6 sm:gap-8 sm:p-8">
-											{ active === "games" ? <a href="/services/games" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Game Hosting </p></a> : <a href="/services/games" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Game Hosting </p></a> }
-											{ active === "website" ? <a href="/services/website" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Website Hosting </p></a> : <a href="/services/website" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Website Hosting </p></a> }
-											{ active === "email" ? <a href="/services/email" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Email Hosting </p></a> : <a href="/services/email" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Email Hosting </p></a> }
-											{ active === "storage" ? <a href="/services/storage" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Storage Hosting </p></a> : <a href="/services/storage" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Storage Hosting </p></a> }
-											{ active === "discordbot" ? <a href="/discord/discordbot" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Discord Bot Hosting </p></a> : <a href="/discord/discordbot" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Discord Bot Hosting </p></a> }
-											{ active === "vps" ? <a href="/services/storage" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> VPS Hosting </p></a> : <a href="/services/vps" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> VPS Hosting </p></a> }
-											{ active === "voices" ? <a href="/services/voice" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Voice Server Hosting </p></a> : <a href="/services/voice" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Voice Server Hosting </p></a> }
+									<div
+										class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-50 overflow-hidden"
+									>
+										<div
+											class="relative grid gap-6 bg-gray-800 px-5 py-6 sm:gap-8 sm:p-8"
+										>
+											{
+												active === "games" ? (
+													<a
+														href="/services/games"
+														class="-m-3 p-3 block rounded-md bg-gray-900 text-white"
+													>
+														<p class="text-gray-300 font-medium">
+															{" "}
+															Game Hosting{" "}
+														</p>
+													</a>
+												) : (
+													<a
+														href="/services/games"
+														class="-m-3 p-3 block rounded-md hover:bg-gray-700"
+													>
+														<p class="text-gray-300 font-medium">
+															{" "}
+															Game Hosting{" "}
+														</p>
+													</a>
+												)
+											}
+											{
+												active === "website" ? (
+													<a
+														href="/services/website"
+														class="-m-3 p-3 block rounded-md bg-gray-900 text-white"
+													>
+														<p class="text-gray-300 font-medium">
+															{" "}
+															Website Hosting{" "}
+														</p>
+													</a>
+												) : (
+													<a
+														href="/services/website"
+														class="-m-3 p-3 block rounded-md hover:bg-gray-700"
+													>
+														<p class="text-gray-300 font-medium">
+															{" "}
+															Website Hosting{" "}
+														</p>
+													</a>
+												)
+											}
+											{
+												active === "email" ? (
+													<a
+														href="/services/email"
+														class="-m-3 p-3 block rounded-md bg-gray-900 text-white"
+													>
+														<p class="text-gray-300 font-medium">
+															{" "}
+															Email Hosting{" "}
+														</p>
+													</a>
+												) : (
+													<a
+														href="/services/email"
+														class="-m-3 p-3 block rounded-md hover:bg-gray-700"
+													>
+														<p class="text-gray-300 font-medium">
+															{" "}
+															Email Hosting{" "}
+														</p>
+													</a>
+												)
+											}
+											{
+												active === "storage" ? (
+													<a
+														href="/services/storage"
+														class="-m-3 p-3 block rounded-md bg-gray-900 text-white"
+													>
+														<p class="text-gray-300 font-medium">
+															{" "}
+															Storage Hosting{" "}
+														</p>
+													</a>
+												) : (
+													<a
+														href="/services/storage"
+														class="-m-3 p-3 block rounded-md hover:bg-gray-700"
+													>
+														<p class="text-gray-300 font-medium">
+															{" "}
+															Storage Hosting{" "}
+														</p>
+													</a>
+												)
+											}
+											{
+												active === "discordbot" ? (
+													<a
+														href="/discord/discordbot"
+														class="-m-3 p-3 block rounded-md bg-gray-900 text-white"
+													>
+														<p class="text-gray-300 font-medium">
+															{" "}
+															Discord Bot Hosting{" "}
+														</p>
+													</a>
+												) : (
+													<a
+														href="/discord/discordbot"
+														class="-m-3 p-3 block rounded-md hover:bg-gray-700"
+													>
+														<p class="text-gray-300 font-medium">
+															{" "}
+															Discord Bot Hosting{" "}
+														</p>
+													</a>
+												)
+											}
+											{
+												active === "vps" ? (
+													<a
+														href="/services/storage"
+														class="-m-3 p-3 block rounded-md bg-gray-900 text-white"
+													>
+														<p class="text-gray-300 font-medium">
+															{" "}
+															VPS Hosting{" "}
+														</p>
+													</a>
+												) : (
+													<a
+														href="/services/vps"
+														class="-m-3 p-3 block rounded-md hover:bg-gray-700"
+													>
+														<p class="text-gray-300 font-medium">
+															{" "}
+															VPS Hosting{" "}
+														</p>
+													</a>
+												)
+											}
+											{
+												active === "voices" ? (
+													<a
+														href="/services/voice"
+														class="-m-3 p-3 block rounded-md bg-gray-900 text-white"
+													>
+														<p class="text-gray-300 font-medium">
+															{" "}
+															Voice Server Hosting{" "}
+														</p>
+													</a>
+												) : (
+													<a
+														href="/services/voice"
+														class="-m-3 p-3 block rounded-md hover:bg-gray-700"
+													>
+														<p class="text-gray-300 font-medium">
+															{" "}
+															Voice Server Hosting{" "}
+														</p>
+													</a>
+												)
+											}
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						{ active === "donation" ? <a href="/donation" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Donation</a> : <a href="/donation" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Donation</a> }
-						{ active === "contact" ? <a href="/contact" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a> : <a href="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a> }
+						{
+							active === "donation" ? (
+								<a
+									href="/donation"
+									class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+								>
+									Donation
+								</a>
+							) : (
+								<a
+									href="/donation"
+									class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+								>
+									Donation
+								</a>
+							)
+						}
+						{
+							active === "contact" ? (
+								<a
+									href="/contact"
+									class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+								>
+									Contact
+								</a>
+							) : (
+								<a
+									href="/contact"
+									class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+								>
+									Contact
+								</a>
+							)
+						}
 					</div>
 				</div>
 			</div>
-			<div class="hidden md:flex space-x-4 items-center justify-end md:flex-1 lg:w-0">
-				<a href="https://status.rabbit-company.com/status/rabbithosting" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Status</a>
-				<a href="/panel" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Panel</a>
-				<a href="https://store.rabbit-hosting.com/customer/auth" target="_blank" class="bg-indigo-600 text-gray-100 hover:bg-indigo-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sign in</a>
+			<div
+				class="hidden md:flex space-x-4 items-center justify-end md:flex-1 lg:w-0"
+			>
+				<a
+					href="https://status.rabbit-company.com/status/rabbithosting"
+					target="_blank"
+					class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+					>Status</a
+				>
+				<a
+					href="/panel"
+					class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+					>Panel</a
+				>
+				<a
+					href="https://store.rabbit-hosting.com/customer/auth"
+					target="_blank"
+					class="bg-indigo-600 text-gray-100 hover:bg-indigo-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+					>Sign in</a
+				>
 			</div>
 			<div class="-mr-2 flex sm:hidden">
-				<button id="main-menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+				<button
+					id="main-menu-btn"
+					type="button"
+					class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+					aria-controls="mobile-menu"
+					aria-expanded="false"
+				>
 					<span class="sr-only">Open main menu</span>
-					<svg id="main-menu-icon" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					<svg
+						id="main-menu-icon"
+						class="block h-6 w-6"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						aria-hidden="true"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 6h16M4 12h16M4 18h16"></path>
 					</svg>
 				</button>
 			</div>
@@ -59,35 +319,239 @@ const activeContactLinkStyle = "bg-gray-900 text-white hover:text-white block px
 	</div>
 	<div class="sm:hidden hidden" id="mobile-menu">
 		<div class="px-2 pt-2 pb-3 space-y-1">
-			{ active === "home" ? <a href="/" class="bg-gray-900 text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a> : <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a> }
+			{
+				active === "home" ? (
+					<a
+						href="/"
+						class="bg-gray-900 text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+					>
+						Home
+					</a>
+				) : (
+					<a
+						href="/"
+						class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+					>
+						Home
+					</a>
+				)
+			}
 			<div class="relative">
-				<button id="mobile-service-menu-btn" type="button" class="text-gray-300 w-full text-base hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium group inline-flex items-center focus:outline-none" aria-expanded="false">
+				<button
+					id="mobile-service-menu-btn"
+					type="button"
+					class="text-gray-300 w-full text-base hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium group inline-flex items-center focus:outline-none"
+					aria-expanded="false"
+				>
 					<span>Services</span>
-					<svg class="block ml-auto text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-						<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+					<svg
+						class="block ml-auto text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 20 20"
+						fill="currentColor"
+						aria-hidden="true"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+							clip-rule="evenodd"></path>
 					</svg>
 				</button>
 				<div class="sm:hidden hidden" id="mobile-service-menu">
 					<div class="absolute z-10 mt-3 px-2 w-screen max-w-xs sm:px-0">
-						<div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-50 overflow-hidden">
-							<div class="relative grid gap-6 bg-gray-800 px-5 py-6 sm:gap-8 sm:p-8">
-								{ active === "games" ? <a href="/services/games" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Game Hosting </p></a> : <a href="/services/games" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Game Hosting </p></a> }
-								{ active === "website" ? <a href="/services/website" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Website Hosting </p></a> : <a href="/services/website" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Website Hosting </p></a> }
-								{ active === "email" ? <a href="/services/email" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Email Hosting </p></a> : <a href="/services/email" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Email Hosting </p></a> }
-								{ active === "storage" ? <a href="/services/storage" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Storage Hosting </p></a> : <a href="/services/storage" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Storage Hosting </p></a> }
-								{ active === "discordbot" ? <a href="/discord/discordbot" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Discord Bot Hosting </p></a> : <a href="/discord/discordbot" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Discord Bot Hosting </p></a> }
-								{ active === "vps" ? <a href="/services/vps" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> VPS Hosting </p></a> : <a href="/services/vps" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> VPS Hosting </p></a> }
-								{ active === "voices" ? <a href="/services/voice" class="-m-3 p-3 block rounded-md bg-gray-900 text-white"><p class="text-gray-300 font-medium"> Voice Server Hosting </p></a> : <a href="/services/voice" class="-m-3 p-3 block rounded-md hover:bg-gray-700"><p class="text-gray-300 font-medium"> Voice Server Hosting </p></a> }
+						<div
+							class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-50 overflow-hidden"
+						>
+							<div
+								class="relative grid gap-6 bg-gray-800 px-5 py-6 sm:gap-8 sm:p-8"
+							>
+								{
+									active === "games" ? (
+										<a
+											href="/services/games"
+											class="-m-3 p-3 block rounded-md bg-gray-900 text-white"
+										>
+											<p class="text-gray-300 font-medium"> Game Hosting </p>
+										</a>
+									) : (
+										<a
+											href="/services/games"
+											class="-m-3 p-3 block rounded-md hover:bg-gray-700"
+										>
+											<p class="text-gray-300 font-medium"> Game Hosting </p>
+										</a>
+									)
+								}
+								{
+									active === "website" ? (
+										<a
+											href="/services/website"
+											class="-m-3 p-3 block rounded-md bg-gray-900 text-white"
+										>
+											<p class="text-gray-300 font-medium"> Website Hosting </p>
+										</a>
+									) : (
+										<a
+											href="/services/website"
+											class="-m-3 p-3 block rounded-md hover:bg-gray-700"
+										>
+											<p class="text-gray-300 font-medium"> Website Hosting </p>
+										</a>
+									)
+								}
+								{
+									active === "email" ? (
+										<a
+											href="/services/email"
+											class="-m-3 p-3 block rounded-md bg-gray-900 text-white"
+										>
+											<p class="text-gray-300 font-medium"> Email Hosting </p>
+										</a>
+									) : (
+										<a
+											href="/services/email"
+											class="-m-3 p-3 block rounded-md hover:bg-gray-700"
+										>
+											<p class="text-gray-300 font-medium"> Email Hosting </p>
+										</a>
+									)
+								}
+								{
+									active === "storage" ? (
+										<a
+											href="/services/storage"
+											class="-m-3 p-3 block rounded-md bg-gray-900 text-white"
+										>
+											<p class="text-gray-300 font-medium"> Storage Hosting </p>
+										</a>
+									) : (
+										<a
+											href="/services/storage"
+											class="-m-3 p-3 block rounded-md hover:bg-gray-700"
+										>
+											<p class="text-gray-300 font-medium"> Storage Hosting </p>
+										</a>
+									)
+								}
+								{
+									active === "discordbot" ? (
+										<a
+											href="/discord/discordbot"
+											class="-m-3 p-3 block rounded-md bg-gray-900 text-white"
+										>
+											<p class="text-gray-300 font-medium">
+												{" "}
+												Discord Bot Hosting{" "}
+											</p>
+										</a>
+									) : (
+										<a
+											href="/discord/discordbot"
+											class="-m-3 p-3 block rounded-md hover:bg-gray-700"
+										>
+											<p class="text-gray-300 font-medium">
+												{" "}
+												Discord Bot Hosting{" "}
+											</p>
+										</a>
+									)
+								}
+								{
+									active === "vps" ? (
+										<a
+											href="/services/vps"
+											class="-m-3 p-3 block rounded-md bg-gray-900 text-white"
+										>
+											<p class="text-gray-300 font-medium"> VPS Hosting </p>
+										</a>
+									) : (
+										<a
+											href="/services/vps"
+											class="-m-3 p-3 block rounded-md hover:bg-gray-700"
+										>
+											<p class="text-gray-300 font-medium"> VPS Hosting </p>
+										</a>
+									)
+								}
+								{
+									active === "voices" ? (
+										<a
+											href="/services/voice"
+											class="-m-3 p-3 block rounded-md bg-gray-900 text-white"
+										>
+											<p class="text-gray-300 font-medium">
+												{" "}
+												Voice Server Hosting{" "}
+											</p>
+										</a>
+									) : (
+										<a
+											href="/services/voice"
+											class="-m-3 p-3 block rounded-md hover:bg-gray-700"
+										>
+											<p class="text-gray-300 font-medium">
+												{" "}
+												Voice Server Hosting{" "}
+											</p>
+										</a>
+									)
+								}
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			{ active === "donation" ? <a href="/donation" class="bg-gray-900 text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium">Donation</a> : <a href="/donation" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Donation</a> }
-			{ active === "contact" ? <a href="/contact" class="bg-gray-900 text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a> : <a href="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a> }
-			<a href="https://status.rabbit-company.com/status/rabbithosting" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Status</a>
-			<a href="/panel" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Panel</a>
-			<a href="https://store.rabbit-hosting.com/customer/auth" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Sign in</a>
+			{
+				active === "donation" ? (
+					<a
+						href="/donation"
+						class="bg-gray-900 text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+					>
+						Donation
+					</a>
+				) : (
+					<a
+						href="/donation"
+						class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+					>
+						Donation
+					</a>
+				)
+			}
+			{
+				active === "contact" ? (
+					<a
+						href="/contact"
+						class="bg-gray-900 text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+					>
+						Contact
+					</a>
+				) : (
+					<a
+						href="/contact"
+						class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+					>
+						Contact
+					</a>
+				)
+			}
+			<a
+				href="https://status.rabbit-company.com/status/rabbithosting"
+				target="_blank"
+				class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+				>Status</a
+			>
+			<a
+				href="/panel"
+				class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+				>Panel</a
+			>
+			<a
+				href="https://store.rabbit-hosting.com/customer/auth"
+				target="_blank"
+				class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+				>Sign in</a
+			>
 		</div>
 	</div>
 </nav>

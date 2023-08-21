@@ -8,20 +8,40 @@ import Packages from "../layouts/Packages.astro";
 import Package from "../layouts/Package.astro";
 import EmptyComparison from "../layouts/EmptyComparison.astro";
 
-const sleepRabbit = ['1GB RAM', '15GB Nvme Storage', '0.25 dedicated Ryzen 9 7950X3D thread', '1 database included', '1 backup included', 'Pterodactyl panel'];
-const fastRabbit = ['3GB RAM', '45GB Nvme Storage', '0.75 dedicated Ryzen 9 7950X3D thread', '1 database included', '1 backup included', 'Pterodactyl panel'];
-const crazyRabbit = ['5GB RAM', '75GB Nvme Storage', '1.25 dedicated Ryzen 9 7950X3D thread', '2 database included', '2 backup included', 'Pterodactyl panel'];
-
+const sleepRabbit = [
+	"1GB RAM",
+	"15GB Nvme Storage",
+	"0.25 dedicated Ryzen 9 7950X3D thread",
+	"1 database included",
+	"1 backup included",
+	"Pterodactyl panel",
+];
+const fastRabbit = [
+	"3GB RAM",
+	"45GB Nvme Storage",
+	"0.75 dedicated Ryzen 9 7950X3D thread",
+	"1 database included",
+	"1 backup included",
+	"Pterodactyl panel",
+];
+const crazyRabbit = [
+	"5GB RAM",
+	"75GB Nvme Storage",
+	"1.25 dedicated Ryzen 9 7950X3D thread",
+	"2 database included",
+	"2 backup included",
+	"Pterodactyl panel",
+];
 ---
 
 <Layout title="Rabbit Hosting - (Service Name) Hosting" trustpilot sellix>
-	<Navbar active="discordbot"></Navbar>
+	<Navbar active="discordbot" />
 
 	<ServicePreview
 		title="Template"
 		description="Template"
-		image="/images/services/discord.svg">
-	</ServicePreview>
+		image="/images/services/discord.svg"
+	/>
 
 	<Packages>
 		<Package
@@ -29,27 +49,27 @@ const crazyRabbit = ['5GB RAM', '75GB Nvme Storage', '1.25 dedicated Ryzen 9 795
 			description="Template"
 			price="1.50"
 			productID="Temp"
-			template={sleepRabbit}>
-		</Package>
+			template={sleepRabbit}
+		/>
 		<Package
 			title="Fast Rabbit"
 			description="Template"
 			price="4.50"
 			productID="Temp"
 			template={fastRabbit}
-			popular>
-		</Package>
+			popular
+		/>
 		<Package
 			title="Crazy Rabbit"
 			description="Template."
 			price="7.50"
 			productID="Temp"
-			template={crazyRabbit}>
-		</Package>
+			template={crazyRabbit}
+		/>
 	</Packages>
 
-	<EmptyComparison></EmptyComparison>
+	<EmptyComparison />
 
-	<Footer></Footer>
+	<Footer />
 	<script is:inline src="/js/default.js"></script>
 </Layout>
