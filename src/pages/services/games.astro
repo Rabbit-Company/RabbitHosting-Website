@@ -8,37 +8,37 @@ import Game from "../../layouts/Game.astro";
 ---
 
 <Layout title="Rabbit Hosting - Games">
-	<Navbar active="games" />
+	<Navbar active="games"></Navbar>
 	<GamesLayout>
 		<Game
 			title="Minecraft Hosting"
 			path="/games/minecraft"
-			image="/images/services/minecraft-logo.png"
-		/>
+			image="/images/services/minecraft-logo.png">
+		</Game>
 		<Game
 			title="Terraria Hosting"
 			path="/games/terraria"
 			image="/images/services/terraria-logo.png"
-			rounded
-		/>
+			rounded>
+		</Game>
 		<Game
 			title="Unturned Hosting"
 			path="/games/unturned"
-			image="/images/services/unturned-logo.png"
-		/>
+			image="/images/services/unturned-logo.png">
+		</Game>
 		<Game
 			title="CSGO Hosting"
 			path="/games/csgo"
 			image="/images/services/csgo-logo.png"
-			rounded
-		/>
+			rounded>
+		</Game>
 		<Game
-			title="Arma 3 Hosting"
-			path="/games/arma3"
-			image="/images/services/arma3-logo.png"
-			rounded
-		/>
+		title="Arma 3 Hosting"
+		path="/games/arma3"
+		image="/images/services/arma3-logo.png"
+		rounded>
+	</Game>
 	</GamesLayout>
-	<Footer />
+	<Footer></Footer>
 	<script is:inline src="/js/default.js"></script>
 </Layout>

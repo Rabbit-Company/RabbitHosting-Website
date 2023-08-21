@@ -8,68 +8,48 @@ import Packages from "../../layouts/Packages.astro";
 import Package from "../../layouts/Package.astro";
 import EmptyComparison from "../../layouts/EmptyComparison.astro";
 
-const sleepRabbit = [
-	"1GB RAM",
-	"15GB Nvme Storage",
-	"0.25 dedicated Ryzen 9 7950X3D thread",
-	"1 database included",
-	"1 backup included",
-	"Pterodactyl panel",
-];
-const fastRabbit = [
-	"3GB RAM",
-	"45GB Nvme Storage",
-	"0.75 dedicated Ryzen 9 7950X3D thread",
-	"1 database included",
-	"1 backup included",
-	"Pterodactyl panel",
-];
-const crazyRabbit = [
-	"5GB RAM",
-	"75GB Nvme Storage",
-	"1.25 dedicated Ryzen 9 7950X3D thread",
-	"2 database included",
-	"2 backup included",
-	"Pterodactyl panel",
-];
+const sleepRabbit = ['1GB RAM', '15GB Nvme Storage', '0.25 dedicated Ryzen 9 7950X3D thread', '1 database included', '1 backup included', 'Pterodactyl panel'];
+const fastRabbit = ['3GB RAM', '45GB Nvme Storage', '0.75 dedicated Ryzen 9 7950X3D thread', '1 database included', '1 backup included', 'Pterodactyl panel'];
+const crazyRabbit = ['5GB RAM', '75GB Nvme Storage', '1.25 dedicated Ryzen 9 7950X3D thread', '2 database included', '2 backup included', 'Pterodactyl panel'];
+
 ---
 
 <Layout title="Rabbit Hosting - TeamSpeak Server Hosting" trustpilot sellix>
-	<Navbar active="teamspeak" />
+    <Navbar active="teamspeak"></Navbar>
 
-	<ServicePreview
-		title="TeamSpeak Server Hosting"
-		description="TeamSpeak (TS) is a proprietary voice-over-Internet Protocol (VoIP) application for audio communication between users on a chat channel, much like a telephone conference call"
-		image="/images/services/TeamSpeak-logo.png"
-	/>
+    <ServicePreview
+        title="TeamSpeak Server Hosting"
+        description="TeamSpeak (TS) is a proprietary voice-over-Internet Protocol (VoIP) application for audio communication between users on a chat channel, much like a telephone conference call"
+        image="/images/services/TeamSpeak-logo.png">
+    </ServicePreview>
 
-	<Packages>
-		<Package
-			title="Sleepy Rabbit"
-			description="For small-sized TeamSpeak servers."
-			price="1.50"
-			productID="64cdf4c1a4cb0"
-			template={sleepRabbit}
-		/>
-		<Package
-			title="Fast Rabbit"
-			description="For medium-sized TeamSpeak servers."
-			price="4.50"
-			productID="64ce12899b9f9"
-			template={fastRabbit}
-			popular
-		/>
-		<Package
-			title="Crazy Rabbit"
-			description="For large-sized TeamSpeak servers."
-			price="7.50"
-			productID="64ce3d5328b8b"
-			template={crazyRabbit}
-		/>
-	</Packages>
+    <Packages>
+        <Package
+            title="Sleepy Rabbit"
+            description="For small-sized TeamSpeak servers."
+            price="1.50"
+            productID="64cdf4c1a4cb0"
+            template={sleepRabbit}>
+        </Package>
+        <Package
+            title="Fast Rabbit"
+            description="For medium-sized TeamSpeak servers."
+            price="4.50"
+            productID="64ce12899b9f9"
+            template={fastRabbit}
+            popular>
+        </Package>
+        <Package
+            title="Crazy Rabbit"
+            description="For large-sized TeamSpeak servers."
+            price="7.50"
+            productID="64ce3d5328b8b"
+            template={crazyRabbit}>
+        </Package>
+    </Packages>
 
-	<EmptyComparison />
+    <EmptyComparison></EmptyComparison>
 
-	<Footer />
-	<script is:inline src="/js/default.js"></script>
+    <Footer></Footer>
+    <script is:inline src="/js/default.js"></script>
 </Layout>

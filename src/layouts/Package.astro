@@ -1,122 +1,43 @@
 ---
-var { title, description, price, productID, template, popular, trialt } =
-	Astro.props;
+
+var { title, description, price, productID, template, popular, trialt } = Astro.props;
 
 let products = {
-	"bungee-rabbit": [
-		"2GB RAM",
-		"35GB Nvme Storage",
-		"0.5 dedicated Ryzen 9 7950X3D thread",
-		"1 database included",
-		"1 backup included",
-		"Pterodactyl panel",
-	],
-	"sleepy-rabbit": [
-		"5GB RAM",
-		"75GB Nvme Storage",
-		"1 dedicated Ryzen 9 7950X3D thread",
-		"1 database included",
-		"1 backup included",
-		"Pterodactyl panel",
-	],
-	"fast-rabbit": [
-		"10GB RAM",
-		"150GB Nvme Storage",
-		"2 dedicated Ryzen 9 7950X3D thread",
-		"2 database included",
-		"2 backup included",
-		"Pterodactyl panel",
-	],
-	"crazy-rabbit": [
-		"15GB RAM",
-		"225GB Nvme Storage",
-		"3 dedicated Ryzen 9 7950X3D thread",
-		"3 database included",
-		"3 backup included",
-		"Pterodactyl panel",
-	],
-	"turbo-rabbit": [
-		"20GB RAM",
-		"300GB Nvme Storage",
-		"4 dedicated Ryzen 9 7950X3D thread",
-		"4 database included",
-		"4 backup included",
-		"Pterodactyl panel",
-	],
-	"insane-rabbit": [
-		"25GB RAM",
-		"375GB Nvme Storage",
-		"5 dedicated Ryzen 9 7950X3D thread",
-		"5 database included",
-		"5 backup included",
-		"Pterodactyl panel",
-	],
-};
+  'bungee-rabbit': ['2GB RAM', '35GB Nvme Storage', '0.5 dedicated Ryzen 9 7950X3D thread', '1 database included', '1 backup included', 'Pterodactyl panel'],
+  'sleepy-rabbit': ['5GB RAM', '75GB Nvme Storage', '1 dedicated Ryzen 9 7950X3D thread', '1 database included', '1 backup included', 'Pterodactyl panel'],
+  'fast-rabbit': ['10GB RAM', '150GB Nvme Storage', '2 dedicated Ryzen 9 7950X3D thread', '2 database included', '2 backup included', 'Pterodactyl panel'],
+  'crazy-rabbit': ['15GB RAM', '225GB Nvme Storage', '3 dedicated Ryzen 9 7950X3D thread', '3 database included', '3 backup included', 'Pterodactyl panel'],
+  'turbo-rabbit': ['20GB RAM', '300GB Nvme Storage', '4 dedicated Ryzen 9 7950X3D thread', '4 database included', '4 backup included', 'Pterodactyl panel'],
+  'insane-rabbit': ['25GB RAM', '375GB Nvme Storage', '5 dedicated Ryzen 9 7950X3D thread', '5 database included', '5 backup included', 'Pterodactyl panel'],
+}
 
 if (!Array.isArray(template)) {
-	template = products[template];
+  template = products[template];
 }
 ---
-
-<div
-	class="relative p-8 bg-gray-700 border border-gray-600 rounded-2xl shadow-sm flex flex-col"
->
-	<div class="flex-1">
-		<h3 class="text-xl font-semibold text-gray-100">{title}</h3>
-		{
-			popular && (
-				<p class="absolute top-0 py-1.5 px-4 bg-indigo-500 rounded-full text-xs font-semibold uppercase tracking-wide text-white transform -translate-y-1/2">
-					Most popular
-				</p>
-			)
-		}
-		<p class="mt-4 flex items-baseline text-gray-100">
-			<span class="text-5xl font-extrabold tracking-tight">${price}</span>
-			<span class="ml-1 text-xl font-semibold">/month</span>
-		</p>
-		<p class="mt-6 text-gray-400">{description}</p>
-		<ul role="list" class="mt-6 space-y-6">
-			{
-				template.map((item) => (
-					<li class="flex">
-						<svg
-							class="flex-shrink-0 w-6 h-6 text-indigo-500"
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							aria-hidden="true"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M5 13l4 4L19 7"
-							/>
-						</svg>
-						<span class="ml-3 text-gray-200">{item}</span>
-					</li>
-				))
-			}
-		</ul>
-	</div>
-	{
-		trialt && parseInt(trialt) > 0 ? (
-			<button
-				data-sellix-product={productID}
-				type="submit"
-				class="bg-gray-800 text-gray-300 hover:bg-gray-900 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
-			>
-				Try Free For {trialt} days
-			</button>
-		) : (
-			<button
-				data-sellix-product={productID}
-				type="submit"
-				class="bg-gray-800 text-gray-300 hover:bg-gray-900 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
-			>
-				Purchase
-			</button>
-		)
-	}
+<div class="relative p-8 bg-gray-700 border border-gray-600 rounded-2xl shadow-sm flex flex-col">
+  <div class="flex-1">
+    <h3 class="text-xl font-semibold text-gray-100">{title}</h3>
+    {popular && <p class="absolute top-0 py-1.5 px-4 bg-indigo-500 rounded-full text-xs font-semibold uppercase tracking-wide text-white transform -translate-y-1/2">Most popular</p>}
+    <p class="mt-4 flex items-baseline text-gray-100">
+      <span class="text-5xl font-extrabold tracking-tight">${price}</span>
+      <span class="ml-1 text-xl font-semibold">/month</span>
+    </p>
+    <p class="mt-6 text-gray-400">{description}</p>
+    <ul role="list" class="mt-6 space-y-6">
+      {template.map((item) => (
+        <li class="flex">
+          <svg class="flex-shrink-0 w-6 h-6 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span class="ml-3 text-gray-200">{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+  {trialt && parseInt(trialt) > 0 ? (
+    <button data-sellix-product={productID} type="submit" class="bg-gray-800 text-gray-300 hover:bg-gray-900 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium">Try Free For {trialt} days</button>
+  ) : (
+    <button data-sellix-product={productID} type="submit" class="bg-gray-800 text-gray-300 hover:bg-gray-900 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium">Purchase</button>
+  )}
 </div>

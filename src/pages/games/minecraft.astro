@@ -9,59 +9,59 @@ import Package from "../../layouts/Package.astro";
 import Comparison from "../../layouts/Comparison.astro";
 
 let providers = {
-	"Rabbit Host": {
-		"Dedicated Cores": "yes",
-		"NVMe Storage": "150 GB",
-		"Premium Support": "yes",
-		"Premium Plugins": "yes",
-		"Price for 8GB RAM": "$12.00",
+	'Rabbit Host': {
+		'Dedicated Cores': 'yes',
+		'NVMe Storage': '150 GB',
+		'Premium Support': 'yes',
+		'Premium Plugins': 'yes',
+		'Price for 8GB RAM': '$12.00'
 	},
-	"Pebble Host": {
-		"Dedicated Cores": "yes",
-		"NVMe Storage": "unlimited",
-		"Premium Support": "$2.50 - $15.00",
-		"Premium Plugins": "no",
-		"Price for 8GB RAM": "$33.00",
+	'Pebble Host': {
+		'Dedicated Cores': 'yes',
+		'NVMe Storage': 'unlimited',
+		'Premium Support': '$2.50 - $15.00',
+		'Premium Plugins': 'no',
+		'Price for 8GB RAM': '$33.00'
 	},
-	"Bisect Host": {
-		"Dedicated Cores": "no",
-		"NVMe Storage": "unlimited",
-		"Premium Support": "$3.99",
-		"Premium Plugins": "no",
-		"Price for 8GB RAM": "$39.92",
+	'Bisect Host': {
+		'Dedicated Cores': 'no',
+		'NVMe Storage': 'unlimited',
+		'Premium Support': '$3.99',
+		'Premium Plugins': 'no',
+		'Price for 8GB RAM': '$39.92'
 	},
-	"GG Servers": {
-		"Dedicated Cores": "no",
-		"NVMe Storage": "unlimited",
-		"Premium Support": "$5.00 - $15.00",
-		"Premium Plugins": "no",
-		"Price for 8GB RAM": "$48.00",
+	'GG Servers': {
+		'Dedicated Cores': 'no',
+		'NVMe Storage': 'unlimited',
+		'Premium Support': '$5.00 - $15.00',
+		'Premium Plugins': 'no',
+		'Price for 8GB RAM': '$48.00'
 	},
-	"Apex Hosting": {
-		"Dedicated Cores": "no",
-		"NVMe Storage": "question",
-		"Premium Support": "$5.00 - $25.00",
-		"Premium Plugins": "no",
-		"Price for 8GB RAM": "$39.99",
+	'Apex Hosting': {
+		'Dedicated Cores': 'no',
+		'NVMe Storage': 'question',
+		'Premium Support': '$5.00 - $25.00',
+		'Premium Plugins': 'no',
+		'Price for 8GB RAM': '$39.99'
 	},
-	"Bloom Host": {
-		"Dedicated Cores": "yes",
-		"NVMe Storage": "120 GB",
-		"Premium Support": "question",
-		"Premium Plugins": "no",
-		"Price for 8GB RAM": "$24.00",
-	},
+	'Bloom Host': {
+		'Dedicated Cores': 'yes',
+		'NVMe Storage': '120 GB',
+		'Premium Support': 'question',
+		'Premium Plugins': 'no',
+		'Price for 8GB RAM': '$24.00'
+	}
 };
 ---
 
 <Layout title="Rabbit Hosting - Minecraft Hosting" trustpilot sellix>
-	<Navbar />
+	<Navbar></Navbar>
 
 	<ServicePreview
 		title="Minecraft Hosting"
 		description="It is an independent computer game designed in 2009 by self-taught Swedish programmer Markus Persson, who claims it now has over 100 million registered users."
-		image="/images/services/minecraft.jpg"
-	/>
+		image="/images/services/minecraft.jpg">
+	</ServicePreview>
 
 	<Packages>
 		<Package
@@ -69,48 +69,51 @@ let providers = {
 			description="Only for Proxy (Bungeecord) servers."
 			price="3.00"
 			productID="6434ffb137e40"
-			template="bungee-rabbit"
-		/>
+			template="bungee-rabbit">
+		</Package>
 		<Package
 			title="Sleepy Rabbit"
 			description="For small-sized Minecraft servers."
 			price="7.50"
 			productID="6434f5f51dff5"
-			template="sleepy-rabbit"
-		/>
+			template="sleepy-rabbit">
+		</Package>
 		<Package
 			title="Fast Rabbit"
 			description="For medium-sized Minecraft servers."
 			price="15.00"
 			productID="64833f75b79f9"
 			template="fast-rabbit"
-			popular
-		/>
+			popular>
+		</Package>
 		<Package
 			title="Crazy Rabbit"
 			description="For large-sized Minecraft servers."
 			price="22.50"
 			productID="64833fd8a00e1"
-			template="crazy-rabbit"
-		/>
+			template="crazy-rabbit">
+		</Package>
 		<Package
 			title="Turbo Rabbit"
 			description="For extra large-sized Minecraft servers."
 			price="30.00"
 			productID="64834029ce15d"
-			template="turbo-rabbit"
-		/>
+			template="turbo-rabbit">
+		</Package>
 		<Package
 			title="Insane Rabbit"
 			description="In our opinion too much for Minecraft."
 			price="37.50"
 			productID="648340829b741"
-			template="insane-rabbit"
-		/>
+			template="insane-rabbit">
+		</Package>
 	</Packages>
 
-	<Comparison providers={providers} date="November 1st, 2021" />
+	<Comparison
+		providers={providers}
+		date="November 1st, 2021">
+	</Comparison>
 
-	<Footer />
+	<Footer></Footer>
 	<script is:inline src="/js/default.js"></script>
 </Layout>

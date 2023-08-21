@@ -7,16 +7,17 @@ import ServicePreview from "../../layouts/ServicePreview.astro";
 import Packages from "../../layouts/Packages.astro";
 import Package from "../../layouts/Package.astro";
 import EmptyComparison from "../../layouts/EmptyComparison.astro";
+
 ---
 
 <Layout title="Rabbit Hosting - Terraria Hosting" trustpilot sellix>
-	<Navbar />
+	<Navbar></Navbar>
 
 	<ServicePreview
 		title="Terraria Hosting"
 		description="Terraria is a land of adventure! A land of mystery! A land that's yours to shape, defend, and enjoy. Your options in Terraria are limitless."
-		image="/images/services/terraria.jpg"
-	/>
+		image="/images/services/terraria.jpg">
+	</ServicePreview>
 
 	<Packages>
 		<Package
@@ -25,40 +26,40 @@ import EmptyComparison from "../../layouts/EmptyComparison.astro";
 			price="7.50"
 			productID="648c2e2331ff7"
 			template="sleepy-rabbit"
-			popular
-		/>
+			popular>
+		</Package>
 		<Package
 			title="Fast Rabbit"
 			description="For medium-sized Terraria servers."
 			price="15.00"
 			productID="648c2e93257eb"
-			template="fast-rabbit"
-		/>
+			template="fast-rabbit">
+		</Package>
 		<Package
 			title="Crazy Rabbit"
 			description="For large-sized Terraria servers."
 			price="22.50"
 			productID="648c2eee36919"
-			template="crazy-rabbit"
-		/>
+			template="crazy-rabbit">
+		</Package>
 		<Package
 			title="Turbo Rabbit"
 			description="In our opinion too much for Terraria."
 			price="30.00"
 			productID="648c2fb614ce7"
-			template="turbo-rabbit"
-		/>
+			template="turbo-rabbit">
+		</Package>
 		<Package
 			title="Insane Rabbit"
 			description="In our opinion too much for Terraria."
 			price="37.50"
 			productID="648c300c50c90"
-			template="insane-rabbit"
-		/>
+			template="insane-rabbit">
+		</Package>
 	</Packages>
 
-	<EmptyComparison />
+	<EmptyComparison></EmptyComparison>
 
-	<Footer />
+	<Footer></Footer>
 	<script is:inline src="/js/default.js"></script>
 </Layout>
