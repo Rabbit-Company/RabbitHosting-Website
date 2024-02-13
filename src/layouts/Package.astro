@@ -36,8 +36,8 @@ if (!Array.isArray(template)) {
     </ul>
   </div>
   {trialt && parseInt(trialt) > 0 ? (
-    <button data-sellix-product={productID} type="submit" class="bg-gray-800 text-gray-300 hover:bg-gray-900 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium">Try Free For {trialt} days</button>
+    <button type="submit" class="bg-gray-800 text-gray-300 hover:bg-gray-900 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium">Try Free For {trialt} days</button>
   ) : (
-    <button data-sellix-product={productID} type="submit" class="bg-gray-800 text-gray-300 hover:bg-gray-900 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium">Purchase</button>
+    <button type="submit" class="bg-gray-800 text-gray-300 hover:bg-gray-900 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium">Purchase</button>
   )}
 </div>
